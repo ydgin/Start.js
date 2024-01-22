@@ -4,6 +4,7 @@ const OPERATIONS = {
   multiply: "*",
   divison: "/",
 };
+
 function calculate({ a, b, operation }) {
   let result = null;
   switch (operation) {
