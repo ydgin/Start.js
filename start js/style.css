@@ -110,6 +110,7 @@ h6 {
   padding-right: 0.9375rem;
   margin: 0 auto;
   max-width: 76.25rem;
+  overflow: hidden;
 } /*# sourceMappingURL=zero.css.map */
 /* ----------------------------- */
 .main__container {
@@ -117,6 +118,7 @@ h6 {
 }
 .rectangle-bigbox {
   padding-top: 150px;
+  position: relative;
 }
 .rectangle-3 {
   box-sizing: border-box;
@@ -130,6 +132,10 @@ h6 {
   border-bottom-right-radius: 5%;
 }
 ._0 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  text-align: center;
   box-sizing: border-box;
   color: #ffffff;
   text-align: left;
@@ -138,8 +144,14 @@ h6 {
   font-weight: 400;
   position: relative;
   left: 300px;
-  top: 120px;
+  top: 80px;
   height: 71px;
+}
+#resulte {
+  position: relative;
+  display: flex;
+  gap: 40px;
+  overflow: hidden;
 }
 /*------------------blox- 1--------------------------- */
 .rectagle-blox1,
@@ -160,13 +172,22 @@ h6 {
   background-color: #826f40;
 }
 
-.eclipse22,
 .eclipse23,
 .eclipse24,
 .eclipse25 {
   background: #aeaeae;
   border-radius: 50%;
   width: 80px;
+  height: 80px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.eclipse22 {
+  background: #6d6d6d;
+  border-radius: 8.75rem;
+  width: 167px;
   height: 80px;
   position: relative;
   display: flex;
@@ -215,7 +236,7 @@ h6 {
   width: 349px;
   height: 0px;
   position: relative;
-  top: 13.75rem;
+  top: 145px;
   transform-origin: 0 0;
   transform: rotate(0deg) scale(1, 1);
 }

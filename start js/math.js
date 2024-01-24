@@ -14,3 +14,13 @@ function multiply(a,b) {
 function divison(a,b) {
     return a / b;
 }
+function click() {
+    if (!em || typeof(ex) === "number" || ex === "0") {expression.innerHTML = this.id;
+        ex = this.id;
+    }else{
+        expression.innerHTML += this.id;
+        ex += this.id;
+    }
+XPathResult.innerHTML
+}
+const sum = function(arguments) {}
