@@ -78,23 +78,118 @@ equals.addEventListener('click', ()=> {
     result.innerHTML = trim12(ex);
   }
 })
+// equals.addEventListener('click', () => {
+//   if (!ex) {
+//     result.innerHTML = '0';
+//   } else {
+//     try {
+//       const calculatedResult = new Function('return ' + ex)();
+//       ex = calculatedResult;
+//       expression.innerHTML += '=';
+//       result.innerHTML = trim12(calculatedResult);
+//     } catch (error) {
+//       console.error('Помилка при обчисленні виразу:', error);
+//       // Обробка помилок при обчисленні виразу
+//       result.innerHTML = 'Помилка';
+//     }
+//   }
+// });
+// function checkLength(arg) { // if we enter a number that's too long 
+//   if (arg.toString().length > 14) {
+//     expression.innerHTML = 'number too long'.toUpperCase();
+//     result.innerHTML = '0';
+//     ex = '0';
+//   } 
+// }
 
-function checkLength(arg) { // if we enter a number that's too long 
-  if (arg.toString().length > 14) {
-    expression.innerHTML = 'number too long'.toUpperCase();
-    result.innerHTML = '0';
-    ex = '0';
-  } 
-}
+// function trim12(arg) { // if we calculate a number that's too long
+//   if (arg.toString().length > 14) {
+//     ex = parseFloat(arg.toPrecision(12));
+//     if (ex.toString().length > 14) { 
+//       ex = ex.toExponential(9);
+//     };
+//     return ex;
+//   } else {
+//     return arg;
+//   }
+// }
+// const result = document.getElementById('result');
+//   const expression = document.getElementById('expression');
+//   const numbers = document.querySelectorAll('.number');
+//   const operations = document.querySelectorAll('.operation');
+//   const equals = document.getElementById('btnEquals');
+//   const clear = document.getElementById('btnClear');
+//   let ex = '0';
 
-function trim12(arg) { // if we calculate a number that's too long
-  if (arg.toString().length > 14) {
-    ex = parseFloat(arg.toPrecision(12));
-    if (ex.toString().length > 14) { 
-      ex = ex.toExponential(9);
-    };
-    return ex;
-  } else {
-    return arg;
-  }
-}
+//   function clickNumber() {
+//     if (ex === '0' || typeof(ex) === 'number') {
+//       expression.textContent = this.textContent;
+//       ex = this.textContent;
+//     } else {
+//       expression.textContent += this.textContent;
+//       ex += this.textContent;
+//     }
+//     result.textContent = ex.split(/\/|\*|\+|-|=/).pop();
+//   }
+
+//   function clickOperation() {
+//     if (!ex) {
+//       return;
+//     }
+//     ex = ex.toString().replace(/=/, '');
+//     if (ex.match(/\/|\*|\+|-|=/)) {
+//       ex = eval(ex).toString();
+//     } 
+//     expression.textContent = expression.textContent.replace(/=/, '') + this.textContent;
+//     ex += this.textContent;
+//     result.textContent = this.textContent;
+//   }
+
+//   function clearAll() {
+//     result.textContent = '';
+//     expression.textContent = '';
+//     ex = '';
+//   }
+
+//   function equalsClick() {
+//     if (!ex) {
+//       result.textContent = '0';
+//     } else {
+//       try {
+//         const calculatedResult = new Function('return ' + ex)();
+//         ex = calculatedResult;
+//         expression.textContent += '=';
+//         result.textContent = trim12(calculatedResult);
+//       } catch (error) {
+//         console.error('Помилка при обчисленні виразу:', error);
+//         result.textContent = 'Помилка';
+//       }
+//     }
+//   }
+
+//   function trim12(arg) {
+//     if (arg.toString().length > 14) {
+//       ex = parseFloat(arg.toPrecision(12));
+//       if (ex.toString().length > 14) { 
+//         ex = ex.toExponential(9);
+//       }
+//       return ex;
+//     } else {
+//       return arg;
+//     }
+//   }
+
+//   function addEventListeners() {
+//     numbers.forEach(number => {
+//       number.addEventListener('click', clickNumber);
+//     });
+
+//     operations.forEach(operation => {
+//       operation.addEventListener('click', clickOperation);
+//     });
+
+//     clear.addEventListener('click', clearAll);
+//     equals.addEventListener('click', equalsClick);
+//   }
+
+//   addEventListeners();
