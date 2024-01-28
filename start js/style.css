@@ -32,6 +32,7 @@ aside {
 
 html,
 body {
+  user-select: none;
   font-family: "Inter", sans-serif;
   color: #495057;
   font-weight: 400;

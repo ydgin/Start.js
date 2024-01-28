@@ -1,12 +1,1 @@
-const htmlElement = document.documentElement;
-console.log(htmlElement);
-const headeElement = document.head;
-console.log(headeElement);
-const bodyElement = document.body;
-console.log(bodyElement);
-const firstChildNode = bodyElement.firstChild;
-console.log(firstChildNode);
-const lastChildNode = bodyElement.lastChild;
-console.log(lastChildNode);
-const childNote = bodyElement.childNodes;
-console.log(childNote);
+
