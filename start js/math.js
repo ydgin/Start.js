@@ -1,4 +1,3 @@
-// обьявляем переменные с значениями;
 let a = "";
 let b = "";
 let sign = "";
@@ -15,3 +14,18 @@ const acButton = document.querySelector(".btn_ac");
 
 const container = document.querySelector('.__container');
 
+// Необходимые фнкции;
+// очистка экрана
+function clearAll() {
+    a = '';
+    b = '';
+    sign = '';
+    finish = false;
+    number.textContent = 0;
+  }
+
+//   на кнопку "ac" вешаем обработчик событий
+  acButton.addEventListener('click', function() {
+    clearAll();
+  })
+  
